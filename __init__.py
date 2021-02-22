@@ -58,7 +58,7 @@ class Bminfo(MycroftSkill):
         for event in allEvents:
             if hasattr(event, "end"):
                 self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
-            else:
+            # else:
                 # self.speak_dialog("romm.is.free", data={"room": event.room})
 
 def create_skill():

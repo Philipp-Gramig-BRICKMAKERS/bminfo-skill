@@ -61,7 +61,7 @@ class Bminfo(MycroftSkill):
 
         for event in allEvents:
             self.log.info(event)
-            self.speak_dialog("romm.is.free.after", data={"room": "Huddle Room", "end": "12:30"})
+            self.speak_dialog("room.is.free.after", data={"room": "Huddle Room", "end": "12:30"})
             # else:
                 # self.speak_dialog("romm.is.free", data={"room": event.room})
 

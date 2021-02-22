@@ -1,14 +1,14 @@
-from adapt.intent import IntentBuilder
-from mycroft.skills.core import MycroftSkill, intent_handler
-from mycroft.util.log import LOG
+from mycroft import MycroftSkill, intent_file_handler
 
-class RoomSkill(MycroftSkill):
+
+class Bark(MycroftSkill):
     def __init__(self):
-        super(RoomSkill, self).__init__(name="RoomSkill")
+        MycroftSkill.__init__(self)
 
-    @intent_handler(IntentBuilder("").require("Room"))
-    def handle_room_intent(self, message):
-        self.speak_dialog("room.is.free")
+    @intent_file_handler('bark.intent')
+    def handle_bark(self, message):
+        self.speak_dialog('bark')
+
 
 def create_skill():
-    return RoomSkill()
+    return Bark()

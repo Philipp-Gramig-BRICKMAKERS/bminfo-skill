@@ -44,13 +44,6 @@ class Bminfo(MycroftSkill):
                 "start": "10:15",
                 "end": "12:30",
                 "organizerProfileImage": "/user/johannes.buellesbach@brickmakers.de/picture",
-            },
-            {
-                "room": "Atari",
-                "subject": "Johannes Büllesbach",
-                "start": "10:15",
-                "end": "12:30",
-                "organizerProfileImage": "/user/johannes.buellesbach@brickmakers.de/picture",
             }
         ]
 
@@ -61,7 +54,7 @@ class Bminfo(MycroftSkill):
 
         for event in allEvents:
             self.log.info(event)
-            self.speak_dialog("room.is.free.after", data=event)
+            self.speak_dialog("room.is.free.after", data={'room': "Huddle Room", 'end': "12:30"})
 
 def create_skill():
     return Bminfo()

@@ -58,11 +58,10 @@ class Bminfo(MycroftSkill):
     def handle_room_intent(self, message):
         allRooms = self.getAllRooms()
         allEvents = self.getTodaysRoomsEvents(allRooms)
-        self.log.info(allEvents)
 
         for event in allEvents:
             self.log.info(event)
-            self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
+            self.speak_dialog("romm.is.free.after", data={"room": "Huddle Room", "end": "12:30"})
             # else:
                 # self.speak_dialog("romm.is.free", data={"room": event.room})
 

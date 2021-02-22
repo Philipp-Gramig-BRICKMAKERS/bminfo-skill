@@ -50,24 +50,16 @@ class Bminfo(MycroftSkill):
             }
         ]
 
-    @intent_handler(IntentBuilder("").require("Room").require("Day"))
+    @intent_handler(IntentBuilder("").require("Room"))
     def handle_room_intent(self, message):
         allRooms = self.getAllRooms()
         allEvents = self.getTodaysRoomsEvents(allRooms)
 
-        if message.data["Day"] == "today":
-            for event in allEvents:
-                if hasattr(event, "end"):
-                    self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
-                else:
-                    self.speak_dialog("romm.is.free", data={"room": event.room})
-
-        if message.data["Day"] == "next week":
-            for event in allEvents:
-                if hasattr(event, "end"):
-                    self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
-                else:
-                    self.speak_dialog("romm.is.free", data={"room": event.room})
+        for event in allEvents:
+            if hasattr(event, "end"):
+                self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
+            else:
+                # self.speak_dialog("romm.is.free", data={"room": event.room})
 
 def create_skill():
     return Bminfo()

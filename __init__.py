@@ -62,7 +62,7 @@ class Bminfo(MycroftSkill):
                 else:
                     self.speak_dialog("romm.is.free", data={"room": event.room})
 
-        if message.data["Day"] == "next-week":
+        if message.data["Day"] == "next week":
             for event in allEvents:
                 if hasattr(event, "end"):
                     self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})

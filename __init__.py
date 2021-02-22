@@ -47,6 +47,10 @@ class Bminfo(MycroftSkill):
             },
             {
                 "room": "Atari",
+                "subject": "Johannes Büllesbach",
+                "start": "10:15",
+                "end": "12:30",
+                "organizerProfileImage": "/user/johannes.buellesbach@brickmakers.de/picture",
             }
         ]
 
@@ -54,10 +58,11 @@ class Bminfo(MycroftSkill):
     def handle_room_intent(self, message):
         allRooms = self.getAllRooms()
         allEvents = self.getTodaysRoomsEvents(allRooms)
+        self.log.info(allEvents)
 
         for event in allEvents:
-            if hasattr(event, "end"):
-                self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
+            self.log.info(event)
+            self.speak_dialog("romm.is.free.after", data={"room": event.room, "end": event.end})
             # else:
                 # self.speak_dialog("romm.is.free", data={"room": event.room})
 

@@ -4,7 +4,7 @@ from mycroft.util.log import LOG
 
 class RoomSkill(MycroftSkill):
     def __init__(self):
-        MycroftSkill.__init__(self)
+        super(RoomSkill, self).__init__(name="RoomSkill")
 
     @intent_handler(IntentBuilder("").require("Room"))
     def handle_room_intent(self, message):

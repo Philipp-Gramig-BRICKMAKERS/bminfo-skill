@@ -39,14 +39,14 @@ class Bminfo(MycroftSkill):
     def getTodaysRoomsEvents(self, allRooms):
         return [
             {
-                "room": "Huddle-Room"
+                "room": "Huddle-Room",
                 "subject": "Johannes Büllesbach",
                 "start": "10:15",
                 "end": "12:30",
-                "organizerProfileImage": "/user/johannes.buellesbach@brickmakers.de/picture"
+                "organizerProfileImage": "/user/johannes.buellesbach@brickmakers.de/picture",
             },
             {
-                "room": "Atari"
+                "room": "Atari",
             }
         ]
 

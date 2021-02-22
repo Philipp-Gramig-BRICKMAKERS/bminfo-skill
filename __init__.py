@@ -8,10 +8,9 @@ class TestSkill(MycroftSkill):
     def __init__(self):
         super(TestSkill, self).__init__(name="TestSkill")
 
-    @intent_handler(IntentBuilder("").require("Room").require("Day"))
+    @intent_handler(IntentBuilder("").require("Room"))
     def handle_room_intent(self, message):
-        if message.data["Day"] == "today":
-            self.speak_dialog("room.is.free")
+        self.speak_dialog("room.is.free")
 
     @intent_handler(IntentBuilder("").require("Event").require("Day"))
     def handle_event_intent(self, message):

@@ -1,5 +1,0 @@
-{
-  "expected_dialog": "room.is.free",
-  "intent_type": "FreeRooms.intent",
-  "utterance": "What rooms are free"
-}

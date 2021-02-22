@@ -1,1 +1,1 @@
-The room {{room}} is free after {{end}}.
+The room {{event.room}} is free after {{event.end}}.

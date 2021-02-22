@@ -61,8 +61,7 @@ class Bminfo(MycroftSkill):
 
         for event in allEvents:
             self.log.info(event)
-            self.log.warning(event.room)
-            # self.speak_dialog("room.is.free.after", data={"room": event.room, "end": event.end})
+            self.speak_dialog("room.is.free.after", data=event)
 
 def create_skill():
     return Bminfo()

@@ -1,0 +1,6 @@
+{
+    "utterance": "Do we have new brickmakers",
+    "intent_type": "handle_newBrickmakers_intent",
+    "set_context": {"newBrickmakers": [1,2,3]},
+    "expected_dialog": "new.brickmakers"
+}

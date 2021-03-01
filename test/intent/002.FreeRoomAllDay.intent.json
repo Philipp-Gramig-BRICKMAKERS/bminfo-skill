@@ -1,0 +1,6 @@
+{
+    "utterance": "What rooms are free",
+    "intent_type": "handle_room_intent",
+    "set_context": {"event": {"end": 0}},
+    "expected_dialog": "room.is.free"
+}

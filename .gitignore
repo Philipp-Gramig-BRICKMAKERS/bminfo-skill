@@ -1,0 +1,5 @@
+*.pyc
+*.qmlc
+settings.json
+
+secret.py

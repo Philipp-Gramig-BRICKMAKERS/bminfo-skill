@@ -1,0 +1,5 @@
+{
+    "utterance": "What events are comming up",
+    "intent_type": "handle_event_intent",
+    "expected_dialog": "event"
+}
